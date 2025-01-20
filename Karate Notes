@@ -1,0 +1,44 @@
+Feature Files to be referred as part of learning:
+	1. get_Request.feature and Runner class is TestGetRunner.java
+	2. responseMatcher.feature and Runner class is TestResponseGetRunner.java
+	3. validateJSONArray.feature and Runner class is ValidateJSONArray.java
+	4. validateXMLResponse.feature and Runner class is ValidateXMLResponse.java
+	5. funzzyMatcher.feature and Runner class is FuzzyMatcher.java
+	6. 
+
+Karate Keywords: method, get, status, path, header, deep, contains
+Karate variables: response,match,print
+
+Resources: https://github.com/karatelabs/karate
+_______________________________________________________________________________________________________________________________________________________
+|Marker			|		Description
+|#ignore		|Skip comparison for this field even if the data element or JSON key is present
+|#null			|Expects actual value to be null, and the data element or JSON key must be present
+|#notnull		|Expects actual value to be not-null
+|#present		|Actual value can be any type or even null, but the key must be present (only for JSON / XML, see below)
+|#notpresent	|Expects the key to be not present at all (only for JSON / XML, see below)
+|#array			|Expects actual value to be a JSON array
+|#object		|Expects actual value to be a JSON object
+|#boolean		|Expects actual value to be a boolean true or false
+|#number		|Expects actual value to be a number
+|#string		|Expects actual value to be a string
+|#uuid			|Expects actual (string) value to conform to the UUID format
+|#regex STR		|Expects actual (string) value to match the regular-expression 'STR' (see examples above)
+|#? EXPR		|Expects the JavaScript expression 'EXPR' to evaluate to true, see self-validation expressions below
+|#[NUM] EXPR	|Advanced array validation, see schema validation
+|#(EXPR)	For |completeness, embedded expressions belong in this list as well
+
+Note that #present and #notpresent only make sense when you are matching within a JSON or XML context or using a JsonPath or XPath on the left-hand-side.
+* def json = { foo: 'bar' }
+* match json == { foo: '#present' }
+* match json.nope == '#notpresent'
+
+The rest can also be used even in 'primitive' data matches like so:
+* match foo == '#string'
+# convenient (and recommended) way to check for array length
+* match bar == '#[2]'
+
+Optional Fields
+If two cross-hatch # symbols are used as the prefix (for example: ##number), it means that the key is optional or that the value can be null.
+* def foo = { bar: 'baz' }
+* match foo == { bar: '#string', ban: '##string' }
