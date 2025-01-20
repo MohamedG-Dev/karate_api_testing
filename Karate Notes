@@ -42,3 +42,5 @@ Optional Fields
 If two cross-hatch # symbols are used as the prefix (for example: ##number), it means that the key is optional or that the value can be null.
 * def foo = { bar: 'baz' }
 * match foo == { bar: '#string', ban: '##string' }
+===============================================================================
+'_' -> this is called as fuzzy matcher

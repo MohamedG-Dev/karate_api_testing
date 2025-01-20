@@ -16,6 +16,20 @@ Feature: To validate Fuzzy matcher using GET end point
     And match response.[0].project[0].projectName == '#ignore'
     And match response.[0].project[0].technology == '#array'
     And match response.[0].jobTitle == '#string'
+    #Complex fuzzy matcher
+    And match response.[0].jobId == '#? _ == 1'
+    #the below condition checks that the value of jobTitle should be string
+    #and the length should be greater than 1
+    And match response.[0].jobTitle == '#string? _.length >=1'
+    #to validate the array
+    #the below statement checks that the experience is an array type
+    # '#[]' -> means check the value is an array type
+    And match response.[0].experience == '#[]'
+    # '#[3]' -> means check the size of an array is [3]
+    And match response.[0].experience == '#[3]'
+    # make sure the given array is of string type
+    And match response.[0].experience == '#[3] #string'
+    And match response.[0].experience == '#[3] #string? _.length >= 2'
     
     
     Scenario: to get the data and validate in fuzzy matchers using XML format response
@@ -29,4 +43,8 @@ Feature: To validate Fuzzy matcher using GET end point
     And match response/List/item/experience/experience[2] == '#notnull'
     And match response/List/item/project/project/projectName == '#present'
     And match response/List/item/project/project/technology/technology[3] == '#ignore'
+    #Complex fuzzy matcher
+    And match response/List/item/jobTitle == '#string? _.length >=1'
+    And match response/List/item/JobTitle.id == '#notpresent'
+    
     
