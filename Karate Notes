@@ -6,8 +6,7 @@ Feature Files to be referred as part of learning:
 	5. fuzzyMatcher.feature and Runner class is FuzzyMatcher.java
 	6. karateVariables.feature and Runner class is KarateVariable.java
 
-Karate Keywords: method, get, status, path, header, deep, contains
-Karate variables: response,match,print
+Karate Keywords: method,get,status,path,header,deep,contains,response,match,print
 
 Resources: https://github.com/karatelabs/karate
 _______________________________________________________________________________________________________________________________________________________
@@ -44,3 +43,9 @@ If two cross-hatch # symbols are used as the prefix (for example: ##number), it 
 * match foo == { bar: '#string', ban: '##string' }
 ===============================================================================
 '_' -> this is called as fuzzy matcher
+
+Karate variables: Syntax for variable creation: <Gherkin keyword> <def> <variable_name> = <value>
+#use variable for repeating value
+#Storing the data in external file
+#In matcher expression
+#Passing the data from one feature file to another
