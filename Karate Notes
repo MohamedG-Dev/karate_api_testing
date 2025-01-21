@@ -3,8 +3,8 @@ Feature Files to be referred as part of learning:
 	2. responseMatcher.feature and Runner class is TestResponseGetRunner.java
 	3. validateJSONArray.feature and Runner class is ValidateJSONArray.java
 	4. validateXMLResponse.feature and Runner class is ValidateXMLResponse.java
-	5. funzzyMatcher.feature and Runner class is FuzzyMatcher.java
-	6. 
+	5. fuzzyMatcher.feature and Runner class is FuzzyMatcher.java
+	6. karateVariables.feature and Runner class is KarateVariable.java
 
 Karate Keywords: method, get, status, path, header, deep, contains
 Karate variables: response,match,print
