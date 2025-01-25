@@ -1,11 +1,16 @@
 Feature Files to be referred as part of learning:
-	1. get_Request.feature and Runner class is TestGetRunner.java
-	2. responseMatcher.feature and Runner class is TestResponseGetRunner.java
-	3. validateJSONArray.feature and Runner class is ValidateJSONArray.java
-	4. validateXMLResponse.feature and Runner class is ValidateXMLResponse.java
-	5. fuzzyMatcher.feature and Runner class is FuzzyMatcher.java
-	6. karateVariables.feature and Runner class is KarateVariable.java
-	7. validationUsingFile.feature and Runner class is ValidationUsingExternalFile.java
+	Package name: com.api.automation.getrequest
+		1. get_Request.feature and Runner class is TestGetRunner.java
+		2. responseMatcher.feature and Runner class is TestResponseGetRunner.java
+		3. validateJSONArray.feature and Runner class is ValidateJSONArray.java
+		4. validateXMLResponse.feature and Runner class is ValidateXMLResponse.java
+		5. fuzzyMatcher.feature and Runner class is FuzzyMatcher.java
+		6. karateVariables.feature and Runner class is KarateVariable.java
+		7. validationUsingFile.feature and Runner class is ValidationUsingExternalFile.java
+		
+		com.api.automation.postrequest
+		1. postRequest.feature and Runner class is PostRequestValidation.java
+		2. postRequestExternalFile.feature and Runner class is PostRequestValidation.java
 
 Karate Keywords: method,get,status,path,header,deep,contains,response,match,print
 
