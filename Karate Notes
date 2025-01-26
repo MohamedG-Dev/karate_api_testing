@@ -12,7 +12,8 @@ Feature Files to be referred as part of learning:
 		1. postRequest.feature and Runner class is PostRequestValidation.java
 		2. postRequestExternalFile.feature and Runner class is PostRequestValidation.java
 		3. schemaValidation.feature and Runner class is SchemaValidation.java
-		4. javascriptExecutor.feature and Runner class is 
+		4. javascriptExecutor.feature and Runner class is JavaScriptExecutor.java
+		5. embeddedExpression.feature and Runner class is EmbeddedExpression.java
 
 Karate Keywords: method,get,status,path,header,deep,contains,response,match,print
 
