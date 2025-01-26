@@ -11,6 +11,7 @@ Feature Files to be referred as part of learning:
 		com.api.automation.postrequest
 		1. postRequest.feature and Runner class is PostRequestValidation.java
 		2. postRequestExternalFile.feature and Runner class is PostRequestValidation.java
+		3. schemaValidation.feature and Runner class is SchemaValidation.java
 
 Karate Keywords: method,get,status,path,header,deep,contains,response,match,print
 
