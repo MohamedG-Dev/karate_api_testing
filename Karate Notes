@@ -14,6 +14,7 @@ Feature Files to be referred as part of learning:
 		3. schemaValidation.feature and Runner class is SchemaValidation.java
 		4. javascriptExecutor.feature and Runner class is JavaScriptExecutor.java
 		5. embeddedExpression.feature and Runner class is EmbeddedExpression.java
+		6. jsonPath.feature and Runner class is JSONPath.java
 
 Karate Keywords: method,get,status,path,header,deep,contains,response,match,print
 
@@ -58,3 +59,29 @@ Karate variables: Syntax for variable creation: <Gherkin keyword> <def> <variabl
 #Storing the data in external file
 #In matcher expression
 #Passing the data from one feature file to another
+==================================================================================
+JsonPath: 
+resource url for more reference - https://github.com/json-path/JsonPath
+<dependency>
+    <groupId>com.jayway.jsonpath</groupId>
+    <artifactId>json-path</artifactId>
+    <version>2.9.0</version>
+</dependency>
+
+-JsonPath expressions always refer to a JSON structure in the same way as XPath expression are used in combination with an XML document.
+-The "root member object" in JsonPath is always referred to as $ regardless if it is an object or array.
+-JsonPath expressions can use the dot–notation -> $.store.book[0].title
+or the bracket–notation -> $['store']['book'][0]['title']
+
+Operators
+__________________________________________________________________________________________________
+Operator						|	Description
+	$							|The root element to query. This starts all path expressions.
+	@							|The current node being processed by a filter predicate.
+	*							|Wildcard. Available anywhere a name or numeric are required.
+	..							|Deep scan. Available anywhere a name is required.
+	.<name>						|Dot-notated child
+	['<name>' (, '<name>')]		|Bracket-notated child or children
+	[<number> (, <number>)]		|Array index or indexes
+	[start:end]					|Array slice operator
+	[?(<expression>)]			|Filter expression. Expression must evaluate to a boolean value.
