@@ -86,3 +86,10 @@ Operator						|	Description
 	[<number> (, <number>)]		|Array index or indexes
 	[start:end]					|Array slice operator
 	[?(<expression>)]			|Filter expression. Expression must evaluate to a boolean value.
+================================================================================================================
+Parallel Runners: 
+	-The parallel runner should be placed in the package from where all the packages
+	which contain the feature files are visible.
+	-use the "classpath" variable to specify the location of the package which contains feature files.
+	-Configure the number of threads for the parallel runner
+ 
