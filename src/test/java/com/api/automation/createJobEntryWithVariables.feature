@@ -10,11 +10,12 @@ Feature: To create the job entry in test application
     And print "Helper == >", _id
     * def getRandomValue = function(){return Math.floor((100) * Math.random());}
     * def id = getRandomValue()
-    And request {"jobId": '#(_id)',"jobTitle": "Web Engineering","jobDescription": "To develop web application","experience": ["Google","Apple","Microsoft"],"project": [{"projectName": "Web App","technology": ["JAVA","Spring boot","Maven"]}]}
+    And request {"jobId": '#(_id)',"jobTitle": "APITesting","jobDescription": "To develop web application","experience": ["Google","Apple","Microsoft"],"project": [{"projectName": "Web App","technology": ["JAVA","Spring boot","Maven"]}]}
     And headers {Accept:'application/json', Content-Type: 'application/json'}
     When method post
     And status 201
     * def responseJobId = response.jobId
+    * def responseJobTitle = response.jobTitle
     
     
     
