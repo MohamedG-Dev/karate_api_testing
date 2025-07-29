@@ -53,10 +53,10 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>${maven.surefire.version}</version>
-				<configuration>
+				<!-- <configuration>
 					<argLine>-Dfile.encoding=UTF-8</argLine>
 					<includes>
-						<!--<include>**/ParallelBuilder.java</include> -->
+						<include>**/ParallelBuilder.java</include>
 						<include>**/ParallelRunnerWithTags</include>
 					</includes>
 					<systemProperties>
@@ -64,8 +64,42 @@
 						<tags>@regression</tags>
 					</systemProperties>
 					<rerunFailingTestsCount>2</rerunFailingTestsCount>
+				</configuration> -->
+				<configuration>
+					<includes>
+						<include>
+							**/ParallelRunnerWithCucumberReporting.java
+						</include>
+					</includes>
+					<rerunFailingTestCount>2</rerunFailingTestCount>
+					<systemProperties>
+						<karate.env>${karate.profile}</karate.env>
+					</systemProperties>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
+	<profiles>
+		<profile>
+			<id>staging</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<karate.profile>staging</karate.profile>
+			</properties>
+		</profile>
+		<profile>
+			<id>preprod</id>
+			<properties>
+				<karate.profile>preprod</karate.profile>
+			</properties>
+		</profile>
+		<profile>
+			<id>prod</id>
+			<properties>
+				<karate.profile>prod</karate.profile>
+			</properties>
+		</profile>
+	</profiles>
 </project>

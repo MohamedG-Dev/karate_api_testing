@@ -27,7 +27,7 @@ Feature: To access the GET end point which is secure with Basic Auth
 
   Scenario: To access the GET end point with basic auth vis JavaScript function
     Given path '/secure/webapi/all'
-    * def auth = call read("../../basicAuth.js") {username:'admin',password:'welcome'}
+    * def auth = call read("D:/Learning/API Testing/karate_api_workspace/karate_api_testing/src/test/java/com/api/automation/basicAuth.js") {username:'admin',password:'welcome'}
     And print "This is encoded string====>", auth
     And headers {Accept:'application/json',Authorization:'#(auth)'}
     When method get
